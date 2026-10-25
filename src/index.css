@@ -1,66 +1,98 @@
 @import "tailwindcss";
 
-/* ============ TEMALAR ============ */
 :root,
-[data-theme="dark"] {
-  --bg: #0b0b14;
-  --bg-2: #12121e;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-solid: #171725;
-  --border: rgba(255, 255, 255, 0.09);
-  --text: #ffffff;
-  --text-2: #a0a0b8;
-  --accent: #ff4d8d;
-  --accent-2: #a855f7;
-  --grad: linear-gradient(135deg, #ff4d8d, #a855f7);
-  --aurora-1: rgba(255, 77, 141, 0.16);
-  --aurora-2: rgba(168, 85, 247, 0.14);
-  --danger: #ff5c5c;
-  --ok: #3ddc97;
+[data-theme="neon"] {
+  --bg: radial-gradient(1200px 800px at 50% -10%, #1b1033 0%, #070510 55%, #05030b 100%);
+  --bg-2: linear-gradient(180deg, rgba(168, 85, 247, 0.18) 0%, transparent 40%);
+  --card: rgba(22, 16, 40, 0.7);
+  --card-solid: rgba(28, 20, 52, 0.9);
+  --border: rgba(196, 181, 253, 0.25);
+  --text: #f8f7ff;
+  --text-2: #b9b3ff;
+  --accent: #a855f7;
+  --accent-2: #22d3ee;
+  --grad: linear-gradient(120deg, #a855f7 0%, #22d3ee 100%);
+  --glow: 0 0 0 rgba(168, 85, 247, 0);
+  --ok: #22d3ee;
+  --danger: #f43f5e;
 }
-[data-theme="romantic"] {
-  --bg: #1a0a17;
-  --bg-2: #240e20;
-  --card: rgba(255, 180, 205, 0.07);
-  --card-solid: #2c1126;
-  --border: rgba(255, 180, 205, 0.14);
-  --text: #fff5f9;
-  --text-2: #d8a8c0;
-  --accent: #ff6fa5;
-  --accent-2: #ff9e7d;
-  --grad: linear-gradient(135deg, #ff6fa5, #ff9e7d);
-  --aurora-1: rgba(255, 111, 165, 0.18);
-  --aurora-2: rgba(255, 158, 125, 0.14);
-  --danger: #ff6b6b;
-  --ok: #7dffb8;
+
+[data-theme="rose"] {
+  --bg: radial-gradient(1200px 800px at 50% -10%, #3a1026 0%, #12060d 55%, #090307 100%);
+  --bg-2: linear-gradient(180deg, rgba(244, 63, 94, 0.16) 0%, transparent 40%);
+  --card: rgba(44, 18, 32, 0.72);
+  --card-solid: rgba(52, 22, 38, 0.92);
+  --border: rgba(251, 113, 133, 0.28);
+  --text: #fff5f8;
+  --text-2: #f5b5c6;
+  --accent: #f43f5e;
+  --accent-2: #fb7185;
+  --grad: linear-gradient(120deg, #f43f5e 0%, #fb7185 100%);
+  --glow: 0 0 0 rgba(244, 63, 94, 0);
+  --ok: #f59e0b;
+  --danger: #ef4444;
 }
-[data-theme="light"] {
-  --bg: #f4f2fb;
-  --bg-2: #ffffff;
-  --card: rgba(255, 255, 255, 0.75);
-  --card-solid: #ffffff;
-  --border: rgba(80, 40, 120, 0.1);
-  --text: #1c1230;
-  --text-2: #6f6a85;
-  --accent: #e0357a;
-  --accent-2: #8b45e0;
-  --grad: linear-gradient(135deg, #e0357a, #8b45e0);
-  --aurora-1: rgba(224, 53, 122, 0.1);
-  --aurora-2: rgba(139, 69, 224, 0.09);
-  --danger: #e04848;
-  --ok: #17b978;
+
+[data-theme="sunset"] {
+  --bg: radial-gradient(1200px 800px at 50% -10%, #3b1f12 0%, #130a07 55%, #0a0604 100%);
+  --bg-2: linear-gradient(180deg, rgba(249, 115, 22, 0.16) 0%, transparent 40%);
+  --card: rgba(48, 28, 20, 0.72);
+  --card-solid: rgba(56, 32, 24, 0.92);
+  --border: rgba(251, 146, 60, 0.28);
+  --text: #fff7f2;
+  --text-2: #f5b98c;
+  --accent: #f97316;
+  --accent-2: #f59e0b;
+  --grad: linear-gradient(120deg, #f97316 0%, #f59e0b 100%);
+  --glow: 0 0 0 rgba(249, 115, 22, 0);
+  --ok: #22c55e;
+  --danger: #ef4444;
+}
+
+[data-theme="ocean"] {
+  --bg: radial-gradient(1200px 800px at 50% -10%, #10243a 0%, #06111d 55%, #040b14 100%);
+  --bg-2: linear-gradient(180deg, rgba(56, 189, 248, 0.16) 0%, transparent 40%);
+  --card: rgba(18, 32, 48, 0.72);
+  --card-solid: rgba(22, 38, 58, 0.92);
+  --border: rgba(56, 189, 248, 0.26);
+  --text: #f5fbff;
+  --text-2: #9fd6ff;
+  --accent: #38bdf8;
+  --accent-2: #22d3ee;
+  --grad: linear-gradient(120deg, #38bdf8 0%, #22d3ee 100%);
+  --glow: 0 0 0 rgba(56, 189, 248, 0);
+  --ok: #22d3ee;
+  --danger: #f43f5e;
+}
+
+[data-theme="midnight"] {
+  --bg: radial-gradient(1200px 800px at 50% -10%, #14142a 0%, #050510 55%, #03030a 100%);
+  --bg-2: linear-gradient(180deg, rgba(139, 92, 246, 0.14) 0%, transparent 40%);
+  --card: rgba(20, 20, 38, 0.76);
+  --card-solid: rgba(26, 26, 48, 0.94);
+  --border: rgba(167, 139, 250, 0.24);
+  --text: #f7f7ff;
+  --text-2: #b8b8ff;
+  --accent: #8b5cf6;
+  --accent-2: #a78bfa;
+  --grad: linear-gradient(120deg, #8b5cf6 0%, #a78bfa 100%);
+  --glow: 0 0 0 rgba(139, 92, 246, 0);
+  --ok: #a78bfa;
+  --danger: #f43f5e;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+  font-feature-settings: "ss01","ss02","cv01","cv02";
 }
 
 html,
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   overscroll-behavior-y: none;
+  min-height: 100dvh;
 }
 
 #root {
@@ -68,7 +100,6 @@ body {
   position: relative;
 }
 
-/* ============ AURORA ARKA PLAN ============ */
 .aurora {
   position: fixed;
   inset: 0;
@@ -80,22 +111,23 @@ body {
 .aurora::after {
   content: "";
   position: absolute;
-  width: 70vmax;
-  height: 70vmax;
+  width: 80vmax;
+  height: 80vmax;
   border-radius: 50%;
-  filter: blur(90px);
-  animation: drift 22s ease-in-out infinite alternate;
+  filter: blur(110px);
+  animation: drift 26s ease-in-out infinite alternate;
+  opacity: 0.8;
 }
 .aurora::before {
-  background: var(--aurora-1);
-  top: -25vmax;
-  left: -20vmax;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 28%, transparent), transparent);
+  top: -35vmax;
+  left: -25vmax;
 }
 .aurora::after {
-  background: var(--aurora-2);
-  bottom: -30vmax;
-  right: -22vmax;
-  animation-duration: 28s;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent);
+  bottom: -40vmax;
+  right: -28vmax;
+  animation-duration: 32s;
   animation-direction: alternate-reverse;
 }
 @keyframes drift {
@@ -103,20 +135,45 @@ body {
     transform: translate(0, 0) scale(1);
   }
   to {
-    transform: translate(12vmax, 8vmax) scale(1.15);
+    transform: translate(14vmax, 10vmax) scale(1.18);
   }
 }
 
-/* ============ CAM (GLASS) BİLEŞENLER ============ */
 .glass {
-  background: var(--card);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 60%), var(--card);
   border: 1px solid var(--border);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(22px) saturate(120%);
+  -webkit-backdrop-filter: blur(22px) saturate(120%);
+  box-shadow: 0 40px 80px -60px color-mix(in srgb, var(--accent) 45%, transparent);
 }
+
 .glass-solid {
-  background: var(--card-solid);
+  background: radial-gradient(140% 140% at 0% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 65%), var(--card-solid);
   border: 1px solid var(--border);
+  backdrop-filter: blur(26px) saturate(120%);
+  -webkit-backdrop-filter: blur(26px) saturate(120%);
+}
+
+.btn-grad {
+  background: var(--grad);
+  color: #fff;
+  box-shadow: 0 30px 60px -40px color-mix(in srgb, var(--accent) 70%, transparent);
+  position: relative;
+  overflow: hidden;
+}
+.btn-grad::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, transparent 60%);
+  mix-blend-mode: screen;
+}
+.btn-grad > * {
+  position: relative;
+  z-index: 1;
+}
+.btn-grad:active {
+  transform: scale(0.98);
 }
 
 .grad-text {
@@ -126,17 +183,8 @@ body {
   color: transparent;
 }
 
-.btn-grad {
-  background: var(--grad);
-  color: #fff;
-  box-shadow: 0 8px 24px -8px color-mix(in srgb, var(--accent) 60%, transparent);
-}
-.btn-grad:active {
-  transform: scale(0.96);
-}
-
 .ring-progress {
-  background: conic-gradient(var(--grad) calc(var(--p) * 1%), var(--border) 0);
+  background: conic-gradient(var(--grad) calc(var(--p) * 1%), rgba(255, 255, 255, 0.06) 0);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -149,14 +197,19 @@ body {
 input,
 textarea,
 select {
-  background: var(--card);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 70%), transparent;
   border: 1px solid var(--border);
   color: var(--text);
-  border-radius: 14px;
-  padding: 10px 14px;
+  border-radius: 999px;
+  padding: 12px 18px;
   width: 100%;
   outline: none;
   font-size: 15px;
+  transition: border 160ms ease, box-shadow 160ms ease;
+}
+textarea {
+  border-radius: 18px;
+  min-height: 110px;
 }
 input::placeholder,
 textarea::placeholder {
@@ -164,12 +217,13 @@ textarea::placeholder {
 }
 input:focus,
 textarea:focus {
-  border-color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 70%, white 10%);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
 .safe-b {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 4px);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 6px);
 }
 .safe-t {
-  padding-top: calc(env(safe-area-inset-top, 8px) + 8px);
+  padding-top: calc(env(safe-area-inset-top, 10px) + 10px);
 }
