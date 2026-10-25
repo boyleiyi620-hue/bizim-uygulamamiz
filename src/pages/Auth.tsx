@@ -124,18 +124,18 @@ export default function AuthPage() {
 
         <div className="relative flex flex-col gap-2.5">
           {mode === "signup" && (
-            <div className="relative">
-              <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2 z-30 pointer-events-none" style={{ color: "var(--text-2)" }} />
-              <input type="text" placeholder="Ad Soyad" value={name} onChange={(e) => setName(e.target.value)} className="h-12 !pl-11 !pr-4" autoComplete="name" />
+            <div className="relative flex items-center">
+              <User size={18} className="absolute left-4 z-40 pointer-events-none" style={{ color: "var(--text-2)" }} />
+              <input type="text" placeholder="Ad Soyad" value={name} onChange={(e) => setName(e.target.value)} className="h-12 w-full rounded-full !pl-12 !pr-4 text-[15px] leading-none" autoComplete="name" />
             </div>
           )}
-          <div className="relative">
-            <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2 z-30 pointer-events-none" style={{ color: "var(--text-2)" }} />
-            <input type="email" placeholder="E-posta" value={email} onChange={(e) => setEmail(e.target.value)} className="h-12 !pl-11 !pr-4" autoComplete="email" inputMode="email" />
+          <div className="relative flex items-center">
+            <Mail size={18} className="absolute left-4 z-40 pointer-events-none" style={{ color: "var(--text-2)" }} />
+            <input type="email" placeholder="E-posta" value={email} onChange={(e) => setEmail(e.target.value)} className="h-12 w-full rounded-full !pl-12 !pr-4 text-[15px] leading-none" autoComplete="email" inputMode="email" />
           </div>
-          <div className="relative">
-            <Lock size={18} className="absolute left-4 top-1/2 -translate-y-1/2 z-30 pointer-events-none" style={{ color: "var(--text-2)" }} />
-            <input type="password" placeholder="Şifre" value={pass} onChange={(e) => setPass(e.target.value)} className="h-12 !pl-11 !pr-4" autoComplete={mode === "login" ? "current-password" : "new-password"} />
+          <div className="relative flex items-center">
+            <Lock size={18} className="absolute left-4 z-40 pointer-events-none" style={{ color: "var(--text-2)" }} />
+            <input type="password" placeholder="Şifre" value={pass} onChange={(e) => setPass(e.target.value)} className="h-12 w-full rounded-full !pl-12 !pr-4 text-[15px] leading-none" autoComplete={mode === "login" ? "current-password" : "new-password" } />
           </div>
           {err && <p className="text-xs font-semibold pt-1" style={{ color: "var(--danger)" }}>{err}</p>}
           <button onClick={submit} disabled={busy} className="btn-grad w-full rounded-full h-12 mt-1 font-extrabold flex items-center justify-center gap-2 disabled:opacity-50">
