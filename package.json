@@ -29,5 +29,6 @@
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2",
     "vite": "^7.1.5"
-  }
+  },
+  "homepage": "https://boyleiyi620-hue.github.io/bizim-uygulamamiz/"
 }
