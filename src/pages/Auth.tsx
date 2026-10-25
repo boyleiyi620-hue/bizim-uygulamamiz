@@ -130,17 +130,17 @@ export default function AuthPage() {
 
         <div className="relative space-y-3">
           {mode === "signup" && (
-            <div className="relative">
-              <User size={18} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: "var(--text-2)" }} />
+            <div className="relative flex items-center">
+              <User size={18} className="absolute left-4 z-10" style={{ color: "var(--text-2)" }} />
               <input placeholder="Adın Soyadın" value={name} onChange={(e) => setName(e.target.value)} className="pl-11" />
             </div>
           )}
-          <div className="relative">
-            <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: "var(--text-2)" }} />
+          <div className="relative flex items-center">
+            <Mail size={18} className="absolute left-4 z-10" style={{ color: "var(--text-2)" }} />
             <input placeholder="E-posta" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-11" />
           </div>
-          <div className="relative">
-            <Lock size={18} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: "var(--text-2)" }} />
+          <div className="relative flex items-center">
+            <Lock size={18} className="absolute left-4 z-10" style={{ color: "var(--text-2)" }} />
             <input placeholder="Şifre" type="password" value={pass} onChange={(e) => setPass(e.target.value)} className="pl-11" />
           </div>
           {err && <p className="text-xs font-semibold" style={{ color: "var(--danger)" }}>{err}</p>}
