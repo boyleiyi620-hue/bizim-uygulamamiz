@@ -20,8 +20,8 @@ export default function TabBar({
 }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 safe-b">
-      <div className="mx-auto max-w-md px-4 pb-3">
-        <div className="relative glass rounded-full flex items-center justify-between px-2 py-1.5 overflow-hidden">
+      <div className="mx-auto max-w-md px-3 pb-2">
+        <div className="relative glass rounded-full flex items-center justify-between px-1.5 py-1.5 overflow-hidden">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           {TABS.map((t) => {
             const Icon = t.icon;
@@ -30,7 +30,7 @@ export default function TabBar({
               <button
                 key={t.id}
                 onClick={() => onChange(t.id)}
-                className="relative flex items-center gap-2 px-3 py-2 rounded-full"
+                className="relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-full min-w-[48px] justify-center"
               >
                 {on && (
                   <motion.span
@@ -42,7 +42,7 @@ export default function TabBar({
                 )}
                 <Icon size={18} strokeWidth={on ? 2.4 : 1.8} className="relative" color={on ? "#fff" : "var(--text-2)"} />
                 {on && (
-                  <motion.span initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} className="relative text-xs font-extrabold text-white">
+                  <motion.span initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} className="relative text-[11px] font-extrabold text-white">
                     {t.label}
                   </motion.span>
                 )}
