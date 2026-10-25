@@ -51,8 +51,8 @@ function Shell() {
         <div className="absolute inset-x-[-20%] top-[-40%] h-full rounded-full blur-[160px] opacity-60" style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--accent) 32%, transparent), transparent)" }} />
         <div className="absolute inset-x-[20%] top-[-30%] h-full rounded-full blur-[180px] opacity-40" style={{ background: "radial-gradient(circle, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent)" }} />
       </div>
-      <div className="relative z-10 mx-auto max-w-md min-h-full flex flex-col pb-[calc(env(safe-area-inset-bottom,0px)+96px)]">
-        <header className="flex items-center justify-between px-4 sm:px-6 pt-[calc(env(safe-area-inset-top,10px)+16px)]">
+      <div className="relative z-10 mx-auto w-full max-w-md min-h-full flex flex-col px-0 pb-[calc(env(safe-area-inset-bottom,0px)+96px)]">
+        <header className="flex items-center justify-between px-4 sm:px-5 pt-[calc(env(safe-area-inset-top,12px)+14px)]">
           <div>
             <p className="text-xs uppercase tracking-[0.4em]" style={{ color: "var(--text-2)" }}>BİZİM HİKAYEMİZ</p>
             <p className="text-lg font-extrabold">{state.p1.name} & {state.p2.name}</p>
